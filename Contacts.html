@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Varun's Portfolio</title>
+	
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			}
+
+		body {
+			background-color: #eef2f7; /* Light blueish background */
+			color: #444;
+			display: flex;
+			flex-direction: column;
+			min-height: 100vh;
+		}
+
+		/* Navbar */
+		header {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 20px 10%;
+			background: transparent;
+			}
+
+		.logo {
+			font-size: 24px;
+			font-weight: 800;
+			color: #334155;
+			}
+
+		nav a {
+			text-decoration: none;
+			color: #64748b;
+			margin-left: 25px;
+			font-weight: 500;
+			padding-bottom: 5px;
+			}
+
+		nav a.active {
+			color: #3b82f6;
+			border-bottom: 3px solid #3b82f6;
+		}
+		
+		
+		/* Form Container */
+		.contact-container {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			padding: 50px 20px;
+		}
+
+		h2 {
+			font-size: 1.5rem;
+			margin-bottom: 40px;
+			font-weight: 600;
+		}
+
+		.contact-form {
+			width: 100%;
+			max-width: 500px;
+			display: flex;
+			flex-direction: column;
+			gap: 25px;
+		}
+
+		/* Input Styling */
+			input[type="text"],
+			input[type="email"],
+		textarea {
+			width: 100%;
+			border: none;
+			border-bottom: 1px solid #eee;
+			padding: 10px 5px;
+			outline: none;
+			font-size: 0.9rem;
+			transition: border-color 0.3s;
+		}
+
+		input:focus, textarea:focus {
+			border-bottom: 1px solid #999;
+		}
+
+		/* Pigeon Box Section */
+		.pigeon-box {
+			margin-top: 20px;
+			padding: 20px;
+			border: 1px dashed #ccc;
+			border-radius: 8px;
+			display: flex;
+			align-items: flex-start;
+			gap: 15px;
+		}
+
+		.pigeon-box label {
+			display: flex;
+			flex-direction: column;
+			font-size: 0.85rem;
+			cursor: pointer;
+		}
+
+		.pigeon-box strong {
+			margin-bottom: 5px;
+		}
+
+		.pigeon-box span {
+			color: #888;
+			line-height: 1.4;
+		}
+
+
+		.send-btn {
+			margin-top: 10px;
+			padding: 12px;
+			background: #333;
+			color: white;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+			font-weight: bold;
+		}
+
+		.send-btn:hover {
+			background: #000;
+		}
+		/* Footer Styling */
+		footer {
+			text-align: center;
+			padding: 40px;
+			color: #64748b;
+			font-size: 14px;
+		}
+	</style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Dee🌜</div>
+        <nav>
+            <a href="file:///C:/Users/dell/Documents/Main%20page.html">Home</a>
+            <a href="file:///C:/Users/dell/Documents/About.html">About</a>
+            <a href="file:///C:/Users/dell/Documents/Project.html">Projects</a>
+            <a href="file:///C:/Users/dell/Documents/Contacts.html" class="active">Contact</a>
+        </nav>
+    </header>
+
+    <main class="contact-container">
+        <h2>Initiate Protocol: Communication</h2>
+        
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Enter your transmission here..." rows="5"></textarea>
+
+            <div class="pigeon-box">
+                <input type="checkbox" id="pigeon">
+                <label for="pigeon">
+                    <strong>Send via Pigeon Letter Service</strong>
+                    <span>Warning: Delivery times may vary depending on bird stamina and weather conditions.</span>
+                </label>
+            </div>
+            
+            <button type="submit" class="send-btn">Send Transmission</button>
+        </form>
+    </main>
+
+     <footer>
+        Portfolio website made using HTML, CSS and Some help.
+    </footer>
+
+</body>
+</html>

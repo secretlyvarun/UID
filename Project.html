@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Varun's Portfolio</title>
+	
+    <style>
+        * {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			}
+
+		body {
+			background-color: #eef2f7; /* Light blueish background */
+			color: #444;
+			display: flex;
+			flex-direction: column;
+			min-height: 100vh;
+		}
+
+		/* Navbar */
+		header {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 20px 10%;
+			background: transparent;
+			}
+
+		.logo {
+			font-size: 24px;
+			font-weight: 800;
+			color: #334155;
+			}
+
+		nav a {
+			text-decoration: none;
+			color: #64748b;
+			margin-left: 25px;
+			font-weight: 500;
+			padding-bottom: 5px;
+			}
+
+		nav a.active {
+			color: #3b82f6;
+			border-bottom: 3px solid #3b82f6;
+		}
+
+        /* Main Content Container */
+        main {
+            padding-top: 100px;
+            max-width: 1200px;
+            margin: 0 auto;
+            min-height: 80vh;
+        }
+
+        /* Project Section Styling */
+        .project {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 80px 20px;
+            gap: 50px;
+        }
+
+                @keyframes reveal {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Reverse layout for alternating projects */
+        .project.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .project-image {
+            flex: 1;
+            max-width: 550px;
+            overflow: hidden;
+            border-radius: var(--border-radius);
+        }
+
+        .project-image img {
+            width: 100%;
+            height: auto;;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            display: block;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.5s ease;
+        }
+
+        /* Image Hover Effect */
+        .project-image img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .project-content {
+            flex: 1;
+        }
+
+        .project-content h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .project-content p {
+            color: var(--secondary-text);
+            font-size: 0.95rem;
+            text-align: justify;
+        }
+
+        /* Footer Styling */
+		footer {
+			text-align: center;
+			padding: 40px;
+			color: #64748b;
+			font-size: 14px;
+		}
+
+        
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Dee🌜</div>
+        <nav>
+            <a href="file:///C:/Users/dell/Documents/Main%20page.html">Home</a>
+            <a href="file:///C:/Users/dell/Documents/About.html">About</a>
+            <a href="file:///C:/Users/dell/Documents/Project.html" class="active">Projects</a>
+            <a href="file:///C:/Users/dell/Documents/Contacts.html">Contact</a>
+        </nav>
+    </header>
+
+    <main id="home">
+        <!-- Project 1 -->
+        <section class="project" id="project1">
+            <div class="project-image">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800" alt="Nexus Analytics Dashboard" onerror="this.src='https://via.placeholder.com/600x400?text=Nexus+Analytics'">
+            </div>
+            <div class="project-content">
+                <h2>Nexus Analytics Dashboard</h2>
+                <p>
+                    A comprehensive data visualization tool built for enterprise clients. It processes millions of 
+                    rows of data locally to render fluid, interactive charts without server lag. Implemented a 
+                    custom glass-morphic design system to reduce cognitive load while presenting dense data 
+                    arrays.
+                </p>
+            </div>
+        </section>
+
+        <!-- Project 2 -->
+        <section class="project reverse" id="project2">
+            <div class="project-image">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800" alt="Aura Digital Storefront" onerror="this.src='https://via.placeholder.com/600x400?text=Aura+Storefront'">
+            </div>
+            <div class="project-content">
+                <h2>Aura Digital Storefront</h2>
+                <p>
+                    A headless e-commerce experience designed for high-end fashion brands. Features micro-interactions, 
+                    seamless page transitions, and an innovative 3D product viewer. The architecture prioritizes 
+                    core web vitals, resulting in a 99/100 Lighthouse score across all metrics.
+                </p>
+            </div>
+        </section>
+    </main>
+
+     <footer>
+        Portfolio website made using HTML, CSS and Some help.
+    </footer>
+
+</body>
+</html>

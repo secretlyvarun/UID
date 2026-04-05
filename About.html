@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Varun's Portfolio</title>
+   
+	<style>
+		/* General Reset */
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		}
+
+		body {
+			background-color: #eef2f7; /* Light blueish background */
+			color: #444;
+			display: flex;
+			flex-direction: column;
+			min-height: 100vh;
+		}
+
+		/* Navbar */
+		header {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 20px 10%;
+			background: transparent;
+		}
+
+		.logo {
+			font-size: 24px;
+			font-weight: 800;
+			color: #334155;	
+		}
+
+		nav a {
+			text-decoration: none;
+			color: #64748b;
+			margin-left: 25px;
+			font-weight: 500;
+			padding-bottom: 5px;
+		}
+
+		nav a.active {
+			color: #3b82f6;
+			border-bottom: 3px solid #3b82f6;
+		}
+
+		/* Main Layout */
+		.container {
+			display: flex;
+			gap: 20px;
+			padding: 40px 10%;
+			flex: 1; /* Pushes footer to bottom */
+		}
+
+		.card {
+			background: white;
+			padding: 40px;
+			border-radius: 12px;
+			box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+		}
+
+		.bio-card {
+			flex: 2;
+			line-height: 1.8;
+			color: #475569;
+		}
+
+		.timeline-card {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			gap: 30px;
+			position: relative;
+			padding-left: 50px;
+		}
+
+		/* Footer */
+		footer {
+			text-align: center;
+			padding: 40px;
+			color: #64748b;
+			font-size: 14px;
+		}
+	</style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Dee🌜</div>
+        <nav>
+            <a href="file:///C:/Users/dell/Documents/Main%20page.html">Home</a>
+            <a href="file:///C:/Users/dell/Documents/About.html" class="active">About</a>
+            <a href="file:///C:/Users/dell/Documents/Project.html">Projects</a>
+            <a href="file:///C:/Users/dell/Documents/Contacts.html">Contact</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="card bio-card">
+			
+            <p>I am a curious and driven learner with a strong interest in computer science and mathematics. I enjoy exploring programming concepts in Java, especially object-oriented programming topics like classes, objects, and relationships such as association and composition. Alongside coding, I actively study core mathematical ideas including linear algebra, discrete mathematics, and problem-solving techniques like permutations and combinations. I also have an eye for detail, as seen in my interest in design elements like colors and UI structure. I like building practical projects such as HTML-based applications and responsive layouts, and I prefer understanding concepts deeply rather than just memorizing them. Overall, I am someone who enjoys learning by doing, asking questions, and continuously improving my technical and analytical skills.</p>
+			<br>
+			<p>I’m someone who enjoys figuring out how things work—whether it’s a piece of code, a mathematical concept, or even the subtle details of design. I spend a lot of my time exploring Java and object-oriented programming, breaking down ideas like classes and relationships until they truly make sense. At the same time, I dive into mathematics—linear algebra, discrete math, and problem-solving—not just to solve problems, but to understand the logic behind them. What makes me different is that I don’t like surface-level learning. I ask questions, experiment, and sometimes get stuck—but that’s exactly how I learn best. I enjoy building small projects, playing with HTML layouts, and paying attention to details like colors and structure, because I believe both logic and creativity go hand in hand. For me, learning isn’t just about studying—it’s about exploring, questioning, and constantly improving.</p>
+		</section>
+    </main>
+
+    <footer>
+        Portfolio website made using HTML, CSS and Some help.
+    </footer>
+
+</body>
+</html>
