@@ -107,6 +107,105 @@
 		font-size: 14px;
 		color: #64748b;
 	}
+	
+	
+	
+	
+	
+	
+		/* scroll animetion */
+        @keyframes appear {
+			from {
+				opacity: 0;
+				scale: 0.1;
+			}
+			to {
+				opacity: 1;
+				scale: 1;
+			}
+		}
+		.animation {
+			animation: appear linear;
+			animation-timeline: view();
+			animation-range: entry 0% cover 40%;
+		}
+		
+		
+		@keyframes lefttoright {
+			from {
+				opacity: 0;
+				transform: translateX(-100px); /* start from left */
+			}
+			to {
+				opacity: 1;
+				transform: translateX(0); /* end at normal position */
+			}
+		}
+
+		.LtoR {
+			animation: lefttoright linear;
+			animation-timeline: view();
+			animation-range: entry 0%;
+		}
+		
+		@keyframes righttoleft {
+			from {
+				opacity: 0;
+				transform: translateX(100px); /* start from right */
+			}
+			to {
+				opacity: 1;
+				transform: translateX(0); /* end at normal position */
+			}
+		}
+
+		.RtoL {
+			animation: righttoleft linear;
+			animation-timeline: view();
+			animation-range: entry 0%;
+		}
+	
+	
+	
+	
+	
+	
+	
+		.home-section {
+			height: 100vh;
+			position: relative;
+		}
+		/* THIS IS THE MAGIC */
+		.overlay-text {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+  
+			font-size: 120px;
+			color: black;
+			opacity: 0.1; /* faded look */
+			letter-spacing: 10px;
+
+			animation: fadeMove 2s ease-in-out;
+		}
+		/* Animation */
+		@keyframes fadeMove {
+			from {
+				opacity: 0;
+				transform: translate(-50%, -60%);
+			}
+			to {
+				opacity: 0.1;
+				transform: translate(-50%, -50%);
+			}
+		}
+		
+		
+		
+		
+		
+	
 
 	/* Footer */
 	footer {
@@ -128,50 +227,51 @@
             <a href="./Contact.html">Contact</a>
         </nav>
     </header>
+	
+	<section class="home-section animation">
+		<h1 class="overlay-text">HOME</h1>
+	</section>
 
     <main class="container">
-        <section class="card bio-card">
-			<h1>Hi, I'm Varun</h1>
-			<h2>Architecting Digital Experiences.</h2>
+        <section class="card bio-card LtoR">
+			<h1 class="animation">Hi, I'm Varun</h1>
+			<h2 class="animation">Architecting Digital Experiences.</h2>
 			<br>
-			<p>Welcome to my portfolio. I specialize in building highly responsive, aesthetically pleasing, and robust web applications. With a deep passion for clean code and intuitive user interfaces, I bridge the gap between complex engineering and beautiful design.</p>
+			<p class="animation">Welcome to my portfolio. I specialize in building highly responsive, aesthetically pleasing, and robust web applications. With a deep passion for clean code and intuitive user interfaces, I bridge the gap between complex engineering and beautiful design.</p>
 			<br>
-			<p>My philosophy is simple: Technology should feel invisible. The user shouldn't notice the intricate frameworks or the complex state management happening under the hood; they should only experience a seamless, fluid interaction.</p>
+			<p class="animation">My philosophy is simple: Technology should feel invisible. The user shouldn't notice the intricate frameworks or the complex state management happening under the hood; they should only experience a seamless, fluid interaction.</p>
 			<br>
-			<p>Over the years, I have honed my skills across the entire frontend spectrum, ensuring that every pixel serves a purpose and every interaction delights the user. Feel free to explore my roadmap on the right, or dive deeper into my background and projects using the navigation above.</p>
+			<p class="animation">Over the years, I have honed my skills across the entire frontend spectrum, ensuring that every pixel serves a purpose and every interaction delights the user. Feel free to explore my roadmap on the right, or dive deeper into my background and projects using the navigation above.</p>
 		</section>
 
-        <aside class="card timeline-card">
-            <div class="timeline-item">
-                <div class="dot"></div>
-                <div class="content">
-                    <strong>2021</strong>
+        <aside class="card timeline-card RtoL">
+            <div class="timeline-item animation">
+                <div class="content animation">
+                    <strong class="animation">2021</strong>
 					<br>
-                    <span>Initiated Coding Journey. Mastered structural HTML semantics.</span>
+                    <span class="animation">Initiated Coding Journey. Mastered structural HTML semantics.</span>
                 </div>
             </div>
-            <div class="timeline-item">
-                <div class="dot"></div>
-                <div class="content">
-                    <strong>2022</strong>
+            <div class="timeline-item animation">
+                <div class="content animation">
+                    <strong class="animation">2022</strong>
 					<br>
-                    <span>Advanced CSS3. Flexbox, Grid, and responsive architectures.</span>
+                    <span class="animation">Advanced CSS3. Flexbox, Grid, and responsive architectures.</span>
                 </div>
             </div>
-			<div class="timeline-item">
-                <div class="dot"></div>
-                <div class="content">
-                    <strong>2023</strong>
+			<div class="timeline-item animation">
+                <div class="content animation">
+                    <strong class="animation">2023</strong>
 					<br>
-                    <span>JavaScript & Frameworks. Built 10+ scalable applications.</span>
+                    <span class="animation">JavaScript & Frameworks. Built 10+ scalable applications.</span>
                 </div>
             </div>
-			<div class="timeline-item">
-                <div class="dot"></div>
-                <div class="content">
-                    <strong>2024+</strong>
+			<div class="timeline-item animation">
+                <div class="dot animation"></div>
+                <div class="content animation">
+                    <strong class="animation">2024+</strong>
 					<br>
-                    <span>Expert UI/UX Architecture. Freelancing & Consulting.</span>
+                    <span class="animation">Expert UI/UX Architecture. Freelancing & Consulting.</span>
                 </div>
             </div>
         </aside>

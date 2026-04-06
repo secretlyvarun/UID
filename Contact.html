@@ -133,6 +133,68 @@
 		.send-btn:hover {
 			background: #000;
 		}
+		
+		
+		
+		
+		
+		/* scroll animetion */
+        @keyframes appear {
+			from {
+				opacity: 0;
+				scale: 0.1;
+			}
+			to {
+				opacity: 1;
+				scale: 1;
+			}
+		}
+		.content {
+			animation: appear linear;
+			animation-timeline: view();
+			animation-range: entry 0% cover 40%;
+		}
+		
+		
+		
+		
+		
+		
+		.contact-section {
+			height: 100vh;
+			position: relative;
+		}
+		/* THIS IS THE MAGIC */
+		.overlay-text {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+  
+			font-size: 120px;
+			color: black;
+			opacity: 0.1; /* faded look */
+			letter-spacing: 10px;
+
+			animation: fadeMove 2s ease-in-out;
+		}
+		/* Animation */
+		@keyframes fadeMove {
+			from {
+				opacity: 0;
+				transform: translate(-50%, -60%);
+			}
+			to {
+				opacity: 0.1;
+				transform: translate(-50%, -50%);
+			}
+		}
+		
+		
+		
+		
+		
+		
 		/* Footer Styling */
 		footer {
 			text-align: center;
@@ -153,16 +215,20 @@
             <a href="./Contact.html" class="active">Contact</a>
         </nav>
     </header>
+	<section class="contact-section content">
+		<h1 class="overlay-text">CONTACT</h1>
+	</section>
+
 
     <main class="contact-container">
-        <h2>Initiate Protocol: Communication</h2>
+        <h2 class="content">Initiate Protocol: Communication</h2>
         
         <form class="contact-form">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Enter your transmission here..." rows="5"></textarea>
+            <input type="text" class="content" placeholder="Your Name" required>
+            <input type="email" class="content" placeholder="Your Email" required>
+            <textarea class="content" placeholder="Enter your transmission here..." rows="5"></textarea>
 
-            <div class="pigeon-box">
+            <div class="pigeon-box content">
                 <input type="checkbox" id="pigeon">
                 <label for="pigeon">
                     <strong>Send via Pigeon Letter Service</strong>
@@ -170,7 +236,9 @@
                 </label>
             </div>
             
-            <button type="submit" class="send-btn">Send Transmission</button>
+            <button type="submit" class="send-btn content">Send Transmission</button>
+			<br>
+			<br>
         </form>
     </main>
 

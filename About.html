@@ -79,7 +79,65 @@
 			position: relative;
 			padding-left: 50px;
 		}
+		
 
+
+		/* scroll animetion */
+        @keyframes appear {
+			from {
+				opacity: 0;
+				scale: 0.1;
+			}
+			to {
+				opacity: 1;
+				scale: 1;
+			}
+		}
+		.content {
+			animation: appear linear;
+			animation-timeline: view();
+			animation-range: entry 0% cover 40%;
+		}
+		
+		
+		
+		
+		
+		
+		.about-section {
+			height: 100vh;
+			position: relative;
+		}
+		/* THIS IS THE MAGIC */
+		.overlay-text {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+  
+			font-size: 120px;
+			color: black;
+			opacity: 0.1; /* faded look */
+			letter-spacing: 10px;
+
+			animation: fadeMove 2s ease-in-out;
+		}
+		/* Animation */
+		@keyframes fadeMove {
+			from {
+				opacity: 0;
+				transform: translate(-50%, -60%);
+			}
+			to {
+				opacity: 0.1;
+				transform: translate(-50%, -50%);
+			}
+		}
+		
+		
+		
+		
+		
 		/* Footer */
 		footer {
 			text-align: center;
@@ -100,13 +158,16 @@
             <a href="./Contact.html">Contact</a>
         </nav>
     </header>
+	
+	<section class="about-section content">
+		<h1 class="overlay-text">ABOUT</h1>
+	</section>
 
-    <main class="container">
+    <main class="container content">
         <section class="card bio-card">
-			
-            <p>I am a curious and driven learner with a strong interest in computer science and mathematics. I enjoy exploring programming concepts in Java, especially object-oriented programming topics like classes, objects, and relationships such as association and composition. Alongside coding, I actively study core mathematical ideas including linear algebra, discrete mathematics, and problem-solving techniques like permutations and combinations. I also have an eye for detail, as seen in my interest in design elements like colors and UI structure. I like building practical projects such as HTML-based applications and responsive layouts, and I prefer understanding concepts deeply rather than just memorizing them. Overall, I am someone who enjoys learning by doing, asking questions, and continuously improving my technical and analytical skills.</p>
+            <p class="content">I am a curious and driven learner with a strong interest in computer science and mathematics. I enjoy exploring programming concepts in Java, especially object-oriented programming topics like classes, objects, and relationships such as association and composition. Alongside coding, I actively study core mathematical ideas including linear algebra, discrete mathematics, and problem-solving techniques like permutations and combinations. I also have an eye for detail, as seen in my interest in design elements like colors and UI structure. I like building practical projects such as HTML-based applications and responsive layouts, and I prefer understanding concepts deeply rather than just memorizing them. Overall, I am someone who enjoys learning by doing, asking questions, and continuously improving my technical and analytical skills.</p>
 			<br>
-			<p>I’m someone who enjoys figuring out how things work—whether it’s a piece of code, a mathematical concept, or even the subtle details of design. I spend a lot of my time exploring Java and object-oriented programming, breaking down ideas like classes and relationships until they truly make sense. At the same time, I dive into mathematics—linear algebra, discrete math, and problem-solving—not just to solve problems, but to understand the logic behind them. What makes me different is that I don’t like surface-level learning. I ask questions, experiment, and sometimes get stuck—but that’s exactly how I learn best. I enjoy building small projects, playing with HTML layouts, and paying attention to details like colors and structure, because I believe both logic and creativity go hand in hand. For me, learning isn’t just about studying—it’s about exploring, questioning, and constantly improving.</p>
+			<p class="content">I’m someone who enjoys figuring out how things work—whether it’s a piece of code, a mathematical concept, or even the subtle details of design. I spend a lot of my time exploring Java and object-oriented programming, breaking down ideas like classes and relationships until they truly make sense. At the same time, I dive into mathematics—linear algebra, discrete math, and problem-solving—not just to solve problems, but to understand the logic behind them. What makes me different is that I don’t like surface-level learning. I ask questions, experiment, and sometimes get stuck—but that’s exactly how I learn best. I enjoy building small projects, playing with HTML layouts, and paying attention to details like colors and structure, because I believe both logic and creativity go hand in hand. For me, learning isn’t just about studying—it’s about exploring, questioning, and constantly improving.</p>
 		</section>
     </main>
 

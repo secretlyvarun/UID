@@ -66,16 +66,6 @@
             gap: 50px;
         }
 
-                @keyframes reveal {
-            from {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
 
         /* Reverse layout for alternating projects */
         .project.reverse {
@@ -88,6 +78,7 @@
             overflow: hidden;
             border-radius: var(--border-radius);
         }
+		
 
         .project-image img {
             width: 100%;
@@ -118,6 +109,85 @@
             font-size: 0.95rem;
             text-align: justify;
         }
+		
+		
+		
+		
+		
+		
+		@keyframes lefttoright {
+			from {
+				opacity: 0;
+				transform: translateX(-100px); /* start from left */
+			}
+			to {
+				opacity: 1;
+				transform: translateX(0); /* end at normal position */
+			}
+		}
+
+		.LtoR {
+			animation: lefttoright linear;
+			animation-timeline: view();
+			animation-range: entry 0%;
+		}
+		
+		@keyframes righttoleft {
+			from {
+				opacity: 0;
+				transform: translateX(100px); /* start from right */
+			}
+			to {
+				opacity: 1;
+				transform: translateX(0); /* end at normal position */
+			}
+		}
+
+		.RtoL {
+			animation: righttoleft linear;
+			animation-timeline: view();
+			animation-range: entry 0%;
+		}
+	
+	
+		
+		
+		
+		
+		.project-section {
+			height: 100vh;
+			position: relative;
+		}
+		/* THIS IS THE MAGIC */
+		.overlay-text {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+  
+			font-size: 120px;
+			color: black;
+			opacity: 0.1; /* faded look */
+			letter-spacing: 10px;
+
+			animation: fadeMove 2s ease-in-out;
+		}
+		/* Animation */
+		@keyframes fadeMove {
+			from {
+				opacity: 0;
+				transform: translate(-50%, -60%);
+			}
+			to {
+				opacity: 0.1;
+				transform: translate(-50%, -50%);
+			}
+		}
+		
+		
+		
+		
+		
 
         /* Footer Styling */
 		footer {
@@ -141,14 +211,19 @@
             <a href="./Contact.html">Contact</a>
         </nav>
     </header>
+	
+	<section class="project-section content">
+		<h1 class="overlay-text">PROJECTS</h1>
+	</section>
+
 
     <main id="home">
         <!-- Project 1 -->
         <section class="project" id="project1">
-            <div class="project-image">
+            <div class="project-image LtoR">
                 <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800" alt="Nexus Analytics Dashboard" onerror="this.src='https://via.placeholder.com/600x400?text=Nexus+Analytics'">
             </div>
-            <div class="project-content">
+            <div class="project-content RtoL">
                 <h2>Nexus Analytics Dashboard</h2>
                 <p>
                     A comprehensive data visualization tool built for enterprise clients. It processes millions of 
@@ -161,10 +236,10 @@
 
         <!-- Project 2 -->
         <section class="project reverse" id="project2">
-            <div class="project-image">
+            <div class="project-image RtoL">
                 <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800" alt="Aura Digital Storefront" onerror="this.src='https://via.placeholder.com/600x400?text=Aura+Storefront'">
             </div>
-            <div class="project-content">
+            <div class="project-content LtoR">
                 <h2>Aura Digital Storefront</h2>
                 <p>
                     A headless e-commerce experience designed for high-end fashion brands. Features micro-interactions, 
